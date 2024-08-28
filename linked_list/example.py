@@ -123,3 +123,16 @@ class LinkedList:
         for node in self:
             reversed.add_first(Node(node.data))
         return reversed
+
+
+class Queue(LinkedList):
+    def enqueue(self, elem):
+        self.add_last(Node(elem))
+
+    def dequeue(self):
+        if not self.head:
+            raise Exception("Empty queue")
+        elem = self.head.data
+        self.head = self.head.next if self.head.next else None
+        self.length -= 1
+        return elem
