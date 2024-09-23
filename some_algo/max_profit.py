@@ -1,3 +1,4 @@
+# N
 def max_profit(prices: list[int]) -> int:
     if not prices:
         return 0
@@ -16,6 +17,7 @@ def max_profit(prices: list[int]) -> int:
     return max_profit
 
 
+# N x N
 def max_profit_2(prices: list[int]) -> int:
     left = 0
     max_diff = 0
